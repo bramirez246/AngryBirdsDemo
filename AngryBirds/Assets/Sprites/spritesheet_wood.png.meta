@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 882049428e56e2645b5f1eef406c9253
+guid: 29f9f3e966c1b564f9ae0f58f6d7e95e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobile - Angry Birds - Poached Eggs Theme 1_0
+      name: spritesheet_wood_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 259
-        width: 489
-        height: 307
+        x: 360
+        y: 454
+        width: 140
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4be5734f6b5c4e2469234b40a57a1f5b
-      internalID: -318559850
+      spriteID: 02ce2a2fad983f949a3ce7b9b1ccb698
+      internalID: -783460796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Angry Birds - Poached Eggs Theme 1_1
+      name: spritesheet_wood_1
       rect:
         serializedVersion: 2
-        x: 590
-        y: 257
-        width: 344
-        height: 203
+        x: 360
+        y: 314
+        width: 140
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72850328df77d5d489dfe61dd8f2951b
-      internalID: -285705261
+      spriteID: b12c279f2a40d334b90d46fa97d8a73f
+      internalID: -1838035165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Angry Birds - Poached Eggs Theme 1_2
+      name: spritesheet_wood_2
       rect:
         serializedVersion: 2
-        x: 1416
-        y: 257
-        width: 340
-        height: 38
+        x: 221
+        y: 304
+        width: 138
+        height: 219
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67c4901ab4a9274ea837a31ddf6602f
-      internalID: -1214859081
+      spriteID: 7589d4adf765b1d41b8e78b38b5e45d8
+      internalID: -1726990711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_wood_3
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 315
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a0fd1193529774daf1db82c8ff4b19
+      internalID: -2089814235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_wood_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 304
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aece34a56ccfb2f4b9d504b94ca3f34f
+      internalID: 1481999431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_wood_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 314
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a70fccf3d6543c478d116e6c3141c4c
+      internalID: -1936487664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_wood_6
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 665
+        width: 139
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880393361c5be344e90c54c76f0263c6
+      internalID: -651152391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_wood_7
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 524
+        width: 138
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd278de2f1d83a488e0a971d4932731
+      internalID: -741861004
       vertices: []
       indices: 
       edges: []
@@ -170,9 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mobile - Angry Birds - Poached Eggs Theme 1_0: -318559850
-      Mobile - Angry Birds - Poached Eggs Theme 1_1: -285705261
-      Mobile - Angry Birds - Poached Eggs Theme 1_2: -1214859081
+      spritesheet_wood_0: -783460796
+      spritesheet_wood_1: -1838035165
+      spritesheet_wood_2: -1726990711
+      spritesheet_wood_3: -2089814235
+      spritesheet_wood_4: 1481999431
+      spritesheet_wood_5: -1936487664
+      spritesheet_wood_6: -651152391
+      spritesheet_wood_7: -741861004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
