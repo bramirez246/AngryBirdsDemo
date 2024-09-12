@@ -26,11 +26,19 @@ public class NewBehaviourScript : MonoBehaviour
     //variable of type SlingShotArea script
     [SerializeField] private SlingShotArea slingShotArea;
 
+    [Header("Bird")]
+    [SerializeField] private GameObject angryBirdPrefab;
+    [SerializeField] private float angryBirdPositionOffset = 0.3f;
+
     //global sling shot line position vector2
     private Vector2 SlingShotLinePosition;
+    private Vector2 direction;
+    private Vector2 directionNormalized;
 
     //bool to determine if user clicked within slingshot area
     private bool clickedWithinArea;
+
+    private GameObject spawnedAngryBird;
 
 
     private void Awake()
@@ -38,6 +46,9 @@ public class NewBehaviourScript : MonoBehaviour
         //disable line renderers at start of game
         leftLineRenderer.enabled = false;
         rightLineRenderer.enabled = false;
+
+        //spawn angry bird
+        SpawnAngryBird();
     }
 
     // Update is called once per frame
@@ -51,6 +62,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (Mouse.current.leftButton.isPressed && clickedWithinArea)
         {
            DrawSlingShot();
+           PositionAndRotateAngryBird();
         }
 
         if (Mouse.current.leftButton.wasReleasedThisFrame)
@@ -59,7 +71,20 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
+    #region Slingshot Methods
+
     private void DrawSlingShot()
+    {
+        Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        SlingShotLinePosition = centerPosition.position + Vector3.ClampMagnitude(touchPosition - centerPosition.position, maxDistance);
+
+        SetLines(SlingShotLinePosition);
+
+        direction = (Vector2)centerPosition.position - SlingShotLinePosition;
+        directionNormalized = direction.normalized;
+    }
+
+    private void SetLines(Vector2 position)
     {
         if (!leftLineRenderer.enabled && !rightLineRenderer.enabled)
         {
@@ -67,14 +92,6 @@ public class NewBehaviourScript : MonoBehaviour
             rightLineRenderer.enabled = true;
         }
 
-        Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        SlingShotLinePosition = centerPosition.position + Vector3.ClampMagnitude(touchPosition - centerPosition.position, maxDistance);
-
-        SetLines(SlingShotLinePosition);
-    }
-
-    private void SetLines(Vector2 position)
-    {
         //set left line renderer positions
         leftLineRenderer.SetPosition(0, position);
         leftLineRenderer.SetPosition(1, leftStartPosition.position);
@@ -83,4 +100,25 @@ public class NewBehaviourScript : MonoBehaviour
         rightLineRenderer.SetPosition(0, position);
         rightLineRenderer.SetPosition(1, rightStartPosition.position);
     }
+
+    #endregion
+
+    #region Angry Bird Methods
+    private void SpawnAngryBird()
+    {
+        SetLines(idlePosition.position);
+
+        Vector2 dir = (centerPosition.position - idlePosition.position).normalized;
+        Vector2 spawnPos = (Vector2)idlePosition.position + dir * angryBirdPositionOffset;
+
+        spawnedAngryBird = Instantiate(angryBirdPrefab, spawnPos, Quaternion.identity);
+        spawnedAngryBird.transform.right = dir;
+    }
+
+    private void PositionAndRotateAngryBird()
+    {
+        spawnedAngryBird.transform.position = SlingShotLinePosition + directionNormalized * angryBirdPositionOffset;
+        spawnedAngryBird.transform.right = directionNormalized;
+    }
+    #endregion
 }
