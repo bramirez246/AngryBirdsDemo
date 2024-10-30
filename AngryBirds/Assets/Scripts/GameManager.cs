@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public int MaxNumberOfShots = 3;
     [SerializeField] private float secondsUntilDeathCheck = 2.5f;
+    [SerializeField] private GameObject restartScreenObject;
 
     private int usedNumberOfShots;
 
@@ -95,12 +97,12 @@ public class GameManager : MonoBehaviour
     #region Win/Lose Game
     private void WinGame()
     {
-        Debug.Log("Win game");
+        restartScreenObject.SetActive(true);
     }
 
     private void LoseGame()
     {
-        Debug.Log("Lose game");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     #endregion
 }
